@@ -1,0 +1,1437 @@
+/*
+Theme Name: folio
+Theme URI: https://monurlpersonnel.com/mesthemes
+Author: Kalan Yilmaz
+Author URI: https://monurlpersonnel.com
+Description: Le thème développer avec Wordpress
+Version: 0.1
+Tags: simple, facile, sans danger, base pour la suite
+*/
+
+@font-face {
+  font-family: "TestSohne";
+  src: url("fonts/TestSohne-Buch.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonumentExtended";
+  src: url("fonts/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonumentExtended";
+  src: url("fonts/MonumentExtended-Ultrabold.otf") format("opentype");
+  font-weight: 800; /* Correspond à ultrabold */
+  font-style: normal;
+}
+
+
+
+
+
+header {
+  position: fixed; /* Rendre le header fixe */
+  top: 0; /* Colle le header en haut de la page */
+  left: 0;
+  width: 100%; /* S'étend sur toute la largeur */
+  z-index: 10; /* Assurez-vous qu'il est au-dessus des autres éléments */
+  background-color: #fff; /* Couleur de fond pour éviter la transparence */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour un effet visuel */
+    margin-top: 0;
+    padding-top: 0;
+
+}
+
+
+
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+.site-footer {
+  background: #ffffff;
+  border-top: 2px solid #000;
+  margin: 0;
+  padding: 0;
+  font-family: "TestSohne", sans-serif;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* Header */
+.site-header {
+  background: #ffffff;
+  padding: 50px 30px;
+  justify-content: space-between;
+  border-bottom: 2px solid #000;
+  margin: 0;
+  padding: 0;
+  font-family: "TestSohne", sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* Navigation */
+
+.main-navigation .nav-menu,
+.main-navigation .nav-menu ul {
+  list-style: none; /* Supprime les points */
+  margin: 0; /* Supprime les marges */
+  padding: 0; /* Supprime les espacements */
+}
+
+/* Liens du menu */
+.main-navigation .nav-menu li {
+  display: inline-block; /* Affiche les éléments en ligne */
+  margin: 0; /* Supprime les marges des listes */
+  padding: 0; /* Supprime les espacements */
+  margin-right: 30px; /* Ajoutez un espace entre les éléments */
+}
+
+/* Style des liens */
+.main-navigation .nav-menu li a {
+  text-decoration: none; /* Enlève le soulignement */
+  font-size: 18px; /* Taille du texte */
+  color: #000; /* Couleur par défaut */
+  transition: color 0.3s ease; /* Effet de transition */
+}
+
+/* Survol des liens */
+.main-navigation .nav-menu li a:hover {
+  color: #ff81cc; /* Couleur au survol */
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 40px; /* Augmente l'espace entre les icônes */
+}
+
+.social-links a img {
+  width: 34px;
+  height: 34px;
+  justify-content: space-between;
+}
+
+/* Masquer le menu mobile par défaut */
+.menu-toggle {
+  display: none;
+  margin-left: 85%;
+}
+
+/* Masquer la navigation principale sur mobile */
+.desktop-nav {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Afficher le menu burger en mobile */
+
+  
+  .site-header {
+    background: none; /* Supprime le fond */
+    border-bottom: none; /* Supprime la bordure */
+    box-shadow: none; /* Supprime les ombres */
+  }
+  
+  
+  .mobile-only {
+    display: block;
+    
+  }
+
+  .social-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    width: 40px; /* Largeur de l'icône */
+    height: 40px; /* Hauteur de l'icône */
+    background-color: #FFFFFF; /* Couleur de fond */
+    border: 3px solid #000; /* Bordure noire */
+    border-radius: 12px; /* Coins arrondis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 0px #000; /* Ombre ajoutée */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Transition pour les effets */
+    padding: 5px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Masquer le menu desktop */
+  .main-navigation {
+    display: none;
+  }
+
+  /* Page du menu mobile */
+  .menu-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .fullscreen-navigation {
+    margin-top: 50px;
+  }
+
+  .fullscreen-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .fullscreen-menu-list li {
+    margin: 20px 0;
+  }
+
+  .fullscreen-menu-list li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #000;
+    font-family: "MonumentExtended-Regular", sans-serif;
+    transition: color 0.3s ease;
+  }
+
+  .fullscreen-menu-list li a:hover {
+    color: #c4dcf1;
+  }
+}
+
+/* Style de la page menu-mobile */
+.menu-mobile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.close-menu-button {
+  position: absolute;
+  top: 95px;
+  right: 35px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-menu-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.menu-navigation {
+  margin-top: 80px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin-bottom: 20px;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.social-links-mobile {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40%;
+}
+
+.social-links-mobile a img {
+  width: 40px;
+  height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.homepage-header {
+  background: #d661ff; /* Couleur violette de la maquette */
+  color: #000;
+  padding: 20px; /* Espacement pour l'en-tête */
+  position: relative;
+  padding-top: 4rem;
+}
+
+.title-outline {
+  font-family: "MonumentExtended", sans-serif;
+  font-weight: 800; /* Correspond à ultrabold */
+  font-size: 180px; /* Ajuste selon tes besoins */
+  color: #000; /* Ajuste selon tes besoins */
+  color: transparent;
+  -webkit-text-stroke: 2px #000; /* Effet outline noir */
+  margin-left: 8%;
+  margin-top: 1%;
+  margin-bottom: 0;
+  
+}
+
+.name-title {
+  font-family: "MonumentExtended", sans-serif;
+  font-weight: normal; /* Assurez-vous que cela correspond à la déclaration de la font */
+  font-size: 86px; /* Ajuste selon tes besoins */
+  width: 70%;
+  color: #000; /* Ajuste la couleur si nécessaire */
+  margin-left: 8%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.specialty {
+  font-size: 40px;
+  font-family: "TestSohne", sans-serif;
+  margin-left: 8%;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* Section pour l'indicateur de scroll */
+.scroll-indicator {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-container {
+  position: relative;
+  width: 200px; /* Taille totale */
+  height: 200px; /* Taille totale */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Texte qui tourne */
+.scroll-circle {
+  position: relative;
+  width: 185px; /* Taille du cercle */
+  height: 185px; /* Taille du cercle */
+  border-radius: 50%;
+  animation: rotate-scroll 5s linear infinite;
+}
+
+.scroll-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Flèche fixe au centre */
+.scroll-arrow {
+  position: absolute;
+  width: 100px; /* Taille de la flèche */
+  height: 100px; /* Taille de la flèche */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: bounce-arrow 1.2s infinite;
+}
+
+/* Animation pour le texte qui tourne */
+@keyframes rotate-scroll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation de la flèche qui va de haut en bas */
+@keyframes bounce-arrow {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(-6px); /* Monte un peu plus haut */
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(6px); /* Distance ajustée */
+  }
+}
+
+/* Section contenant le texte défilant */
+.scrolling-text {
+  background: #ffffff; /* Fond blanc */
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  overflow: hidden;
+  width: 100%;
+  height: 150px; /* Ajuste selon la hauteur souhaitée */
+  display: flex;
+  align-items: center;
+}
+
+/* Conteneur global */
+.text-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Contenu du texte qui défile */
+.scrolling-content {
+  display: flex;
+  animation: scroll-animation 26s linear infinite; /* Animation ralentie */
+  white-space: nowrap;
+  gap: 100px; /* Espace augmenté entre les mots */
+}
+
+/* Style du texte plein */
+.primary {
+  font-family: "MonumentExtended", sans-serif;
+  font-weight: 800;
+  font-size: 100px; /* Taille ajustable */
+  color: #000;
+}
+
+/* Style du texte outline */
+.secondary {
+  font-family: "MonumentExtended", sans-serif;
+  font-weight: 800;
+  font-size: 100px; /* Taille ajustable */
+  color: transparent;
+  -webkit-text-stroke: 2px #000; /* Outline noir */
+}
+
+/* Animation pour faire défiler le texte */
+@keyframes scroll-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Ajuste la distance pour couvrir la moitié */
+  }
+}
+
+/* Styles pour la version mobile */
+@media (max-width: 768px) {
+  .homepage-header {
+    padding: 50px 10px; /* Réduire les marges pour mobile */
+  }
+
+  .title-outline {
+    font-size: 54px; /* Taille réduite pour le titre */
+    margin-left: 0; /* Centrer le texte */
+    margin-top: 20%;
+    margin-bottom: 0;
+    
+  }
+
+  .name-title {
+    font-size: 36px; /* Taille réduite pour le nom */
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .specialty {
+    font-size: 20px; /* Réduire la taille du texte */
+    margin-left: 0;
+  }
+
+  /* Indicateur de scroll */
+  .scroll-indicator {
+    bottom: 6%; /* Remonte légèrement le cercle */
+    right: 20%; /* Place au centre horizontal */
+    transform: translateX(50%); /* Correction du centrage */
+  }
+
+  .scroll-container {
+    width: 100px; /* Réduire la taille globale sur mobile */
+    height: 100px;
+  }
+
+  .scroll-circle {
+    width: 140px; /* Réduire encore plus le cercle */
+    height: 140px;
+  }
+
+  .scroll-arrow {
+    width: 55px; /* Réduire la taille de la flèche */
+    height: 55px;
+  }
+
+  /* Texte déroulant */
+  .scrolling-text {
+    height: 80px; /* Réduire la hauteur */
+  }
+
+  .primary,
+  .secondary {
+    font-size: 40px; /* Réduire la taille de la police */
+  }
+
+  /* Espacement général */
+  .title-outline {
+    margin-bottom: 20px; /* Ajoute un espace pour éviter la superposition */
+  }
+
+  .specialty {
+    margin-bottom: 80px; /* Ajoute un espace suffisant sous le texte */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section principale */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+/* Conteneur principal */
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px;
+}
+
+/* Avatar */
+.avatar-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrer verticalement */
+  position: relative;
+  margin-top: -40px; /* Ajustement pour alignement précis */
+}
+
+.avatar-image {
+  width: 350px; /* Taille de l'avatar */
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Conteneur général pour le texte et la bulle */
+.content-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Bulle indépendante */
+.bubble-wrapper {
+  position: absolute;
+  top: -20px; /* Ajustez pour aligner avec le texte */
+  left: -50px; /* Ajustez pour aligner avec le texte */
+  z-index: -5; /* Derrière les textes */
+}
+
+.bubble-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Contenu de la bulle */
+.bubble-content {
+  position: relative;
+  z-index: 1; /* Au-dessus de la bulle */
+  font-family: "TestSohne", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  width: 80%;
+  left: 7%;
+}
+
+/* Conteneur pour le bouton et les icônes */
+.button-icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alignement à gauche */
+  gap: 15rem;
+  margin-top: 25px;
+  margin-left: 3.4rem;
+}
+
+/* Bouton CV */
+.cv-button {
+  padding: 12px 25px; /* Ajustez l'espacement */
+  background-color: #57ef97; /* Couleur de base */
+  color: #000;
+  font-family: "MonumentExtended", sans-serif; /* Font MonumentExtended */
+  font-size: 14px;
+  font-weight: normal; /* Texte en normal */
+  text-decoration: none;
+  border: 2px solid #000; /* Bordure noire */
+  border-radius: 8px; /* Réduction des bords arrondis */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 4px 4px 0px #000; /* Réduction de l'ombre */
+}
+
+.cv-button:hover {
+  background-color: #01fdf6; /* Couleur au survol */
+  box-shadow: 6px 6px 0px #000; /* Ombre légèrement plus grande au survol */
+}
+
+/* Icônes */
+.tools-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.tool-icon {
+  width: 40px; /* Taille ajustée */
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+@media (max-width: 768px) {
+  /* Section principale */
+  .about-section {
+    flex-direction: column;
+    align-items: flex-start; /* Texte aligné à gauche */
+    padding: 40px 10px;
+  }
+
+  /* Conteneur principal */
+  .about-container {
+    flex-direction: column;
+    align-items: flex-start; /* Aligner les contenus à gauche */
+    gap: 20px; /* Réduire l'espace entre les éléments */
+  }
+
+  /* Avatar */
+  .avatar-container {
+    margin: 0 auto; /* Centrer l'avatar horizontalement */
+  }
+
+  .avatar-image {
+    width: 150px; /* Taille réduite */
+    height: auto;
+  }
+
+  /* Conteneur général pour le texte */
+  .content-container {
+    width: 100%;
+    position: relative;
+    text-align: left; /* Alignement à gauche */
+  }
+
+  /* Bulle indépendante */
+  .bubble-wrapper {
+    display: none; /* Supprimer la bulle en mobile */
+  }
+
+  /* Contenu de la bulle */
+  .bubble-content {
+    margin: 0;
+    font-size: 16px; /* Taille ajustée pour mobile */
+    line-height: 1.6;
+    padding: 0 10px;
+    margin-left: 1rem;
+  }
+
+  /* Conteneur pour le bouton et les icônes */
+  .button-icons-container {
+    flex-direction: column; /* Réorganiser les éléments verticalement */
+    align-items: center; /* Centrer les icônes et le bouton */
+    margin-top: 20px;
+    gap: 10px; /* Espacement réduit entre les éléments */
+  }
+
+  /* Conteneur pour le bouton et les icônes */
+  .button-icons-container {
+    flex-direction: column; /* Réorganiser les éléments verticalement */
+    margin-top: 50px;
+    gap: 15px; /* Réduire l'espace entre les icônes */
+    margin-right: 3.5rem;
+  }
+
+  /* Bouton CV */
+  .cv-button {
+    padding: 10px 20px;
+    font-size: 12px; /* Réduire la taille du texte */
+    margin-bottom: 10px;
+  }
+
+  /* Icônes */
+  .tools-icons {
+    gap: 10px;
+  }
+
+  .tool-icon {
+    width: 30px; /* Réduire la taille des icônes */
+    height: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Section Mes Projets */
+.mes-projets-section {
+    background: #FFCB46; /* Couleur de fond */
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'MonumentExtended', sans-serif;
+    margin-bottom: 5rem;
+}
+
+.mes-projets-section-2 {
+    background: #FFCB46; /* Couleur de fond */
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'MonumentExtended', sans-serif;
+    
+}
+
+
+.mes-projets-titre {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-left: 4.9rem;
+    color: #000;
+    text-align: left; /* Alignement à gauche */
+}
+
+/* Conteneur des projets */
+.mes-projets-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+}
+
+/* Card de projet */
+.projet-card {
+    background: #FF81CC; /* Couleur de fond */
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000; /* Ombre */
+    width: 300px; /* Taille de la carte */
+    padding: 20px;
+    text-align: left; /* Alignement des contenus à gauche */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Contenus alignés à gauche */
+   
+}
+
+.projet-image img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.projet-titre {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #000;
+}
+
+.projet-card p {
+    font-family: 'TestSohne', sans-serif; /* Typographie souhaitée */
+    font-size: 18px; /* Taille du texte */
+    color: #000; /* Couleur du texte */
+    text-align: left; /* Alignement du texte à gauche */
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+/* Bouton du projet */
+.projet-bouton {
+    padding: 10px 20px;
+    background: #57EF97;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0px #000;
+    transition: all 0.3s;
+    font-family: 'MonumentExtended', sans-serif;
+    align-self: center; /* Bouton centré horizontalement */
+}
+
+.projet-bouton:hover {
+    background: #01FDF6;
+    transform: translateY(-3px);
+}
+
+/* Bouton Autres Projets */
+.autres-projets {
+    margin-top: 4rem;
+}
+
+.autres-projets-bouton {
+    padding: 10px 20px;
+    background: #01FDF6;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0px #000;
+    transition: all 0.3s;
+    font-family: 'MonumentExtended', sans-serif;
+}
+
+.autres-projets-bouton:hover {
+    background: #57EF97;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .mes-projets-titre {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-left: 0;
+    color: #000;
+    text-align: center; 
+}
+
+.mes-projets-section {
+    background: #FFCB46; /* Couleur de fond */
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'MonumentExtended', sans-serif;
+    margin-bottom: 1rem;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+.contact-section {
+    background-color: #ffffff;
+    padding: 60px 20px 200px 20px; /* Réduction du padding supérieur et ajout de padding inférieur */
+    text-align: center;
+    position: relative;
+    font-family: 'MonumentExtended', sans-serif;
+}
+
+.contact-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px; /* Réduction de l'espacement en dessous du titre */
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Conteneur du formulaire */
+.contact-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: left; /* Alignement à gauche */
+    position: relative;
+    z-index: 1; /* S'assurer que le formulaire est au-dessus */
+    margin-bottom: 30px; /* Ajouter de l'espace pour ne pas chevaucher le SVG */
+}
+
+/* SVG de fond */
+.enveloppe-svg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Ajustez ce pourcentage pour changer la taille */
+    max-width: 750px; /* Optionnel : limite maximale */
+    height: auto; /* Préserver le ratio d'aspect */
+    z-index: 0; /* SVG derrière le contenu */
+}
+
+/* Champs du formulaire */
+.contact-form input,
+.contact-form textarea {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-family: 'TestSohne', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 150px;
+    resize: none; /* Désactive la redimension des champs */
+}
+
+/* Ligne des champs en haut */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Bouton d'envoi */
+.contact-button {
+    width: 100%;
+    padding: 15px;
+    background: #57EF97;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0px #000;
+    font-family: 'MonumentExtended', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background: #01FDF6;
+    transform: translateY(-3px);
+}
+
+/* Masquer le SVG en version mobile */
+@media (max-width: 768px) {
+    .enveloppe-svg {
+        display: none;
+    }
+
+    .contact-section {
+        padding: 60px 20px; /* Supprimer le padding inférieur pour mobile */
+    }
+}
+
+
+
+
+
+
+
+/* Section Merci */
+.merci-section {
+    background-color: #FFCB46; /* Fond de la page */
+    padding: 80px 20px;
+    text-align: center;
+    font-family: 'MonumentExtended', sans-serif;
+    min-height: 100vh; /* Occuper toute la hauteur de l'écran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.merci-container {
+    background-color: #FFFFFF; /* Fond blanc */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000; /* Effet ombre */
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.merci-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.merci-text {
+    font-family: 'TestSohne', sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.merci-button {
+    padding: 15px 30px;
+    background: #57EF97;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0px #000;
+    font-family: 'MonumentExtended', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.merci-button:hover {
+    background: #01FDF6;
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* En-tête spécifique à la page projet */
+.project-header {
+  background: #FF81CC; /* Couleur violette de la maquette */
+  color: #000;
+  padding: 20px;
+  position: relative;
+  padding-top: 4rem;
+}
+
+.project-title-outline {
+  font-family: "MonumentExtended", sans-serif;
+  font-weight: 800;
+  font-size: 180px;
+  color: transparent;
+  -webkit-text-stroke: 2px #000;
+  margin-left: 8%;
+  margin-top: 1%;
+  margin-bottom: 0;
+}
+
+.project-name-title {
+  font-family: "MonumentExtended", sans-serif;
+  font-weight: normal;
+  font-size: 86px;
+  width: 70%;
+  color: #000;
+  margin-left: 8%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.project-specialty {
+  font-size: 40px;
+  font-family: "TestSohne", sans-serif;
+  margin-left: 8%;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* Indicateur de scroll */
+.project-scroll-indicator {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-scroll-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-scroll-circle {
+  position: relative;
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
+  animation: project-rotate-scroll 5s linear infinite;
+}
+
+.project-scroll-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.project-scroll-arrow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: project-bounce-arrow 1.2s infinite;
+}
+
+/* Animation pour le texte qui tourne */
+@keyframes project-rotate-scroll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation de la flèche */
+@keyframes project-bounce-arrow {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(-6px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(6px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .project-header {
+    padding: 50px 10px;
+  }
+
+  .project-title-outline {
+    font-size: 54px;
+    margin-left: 0;
+    margin-top: 20%;
+    margin-bottom: 0;
+  }
+
+  .project-name-title {
+    font-size: 36px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .project-specialty {
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .project-scroll-indicator {
+    bottom: 6%;
+    right: 20%;
+    transform: translateX(50%);
+  }
+
+  .project-scroll-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .project-scroll-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .project-scroll-arrow {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section globale */
+.project-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 10%;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 500px; /* Uniformise la hauteur des sections */
+  position: relative;
+}
+
+/* Couleurs de fond pour chaque section */
+.project-context {
+  background-color: #FFCB46; /* Jaune */
+  height: 700px;
+  padding-top: 0;
+}
+
+.project-tools {
+  height: 700px;
+}
+
+.project-responsive {
+  background-color: #57EF97; /* Vert clair */
+  height: 700px;
+}
+
+.project-learnings {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  height: 700px; /* Uniformise la hauteur avec les autres sections */
+  text-align: center; /* Centre le texte */
+}
+
+.project-learnings .project-text-container {
+  max-width: 60%; /* Réduit la largeur du texte pour une meilleure lisibilité */
+  text-align: left; /* Aligne le texte au centre */
+  gap: 1.5rem; /* Espacement entre les paragraphes */
+}
+
+/* Centrage du titre dans la section Apprentissages */
+.project-learnings .project-title {
+  font-family: 'MonumentExtended', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0 auto; /* Centre le titre horizontalement */
+  text-align: center; /* Aligne le texte au centre */
+  margin-bottom: 20px; /* Ajoute un espace entre le titre et le contenu */
+}
+
+/* Conteneur du texte */
+.project-text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre le texte verticalement */
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 50%;
+}
+
+.project-text-container p {
+  font-family: 'TestSohne', sans-serif; /* Police importée */
+  font-size: 20px; /* Taille ajustée */
+  color: #000; /* Couleur noire */
+  line-height: 1.6; /* Espacement pour améliorer la lisibilité */
+  margin: 0;
+}
+
+.project-title {
+  font-family: 'MonumentExtended', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+/* Conteneur du contenu */
+.project-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Image */
+.project-image {
+  flex: 1;
+  max-width: 40%;
+  height: auto;
+  display: block;
+  margin: auto; /* Centre l'image horizontalement */
+}
+
+
+
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+  .project-section {
+    display: flex;
+    flex-direction: column; /* Colonne pour les éléments */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    padding: 30px 5%; /* Réduit les marges */
+    width: 100%;
+    box-sizing: border-box;
+    min-height: auto; /* Ajuste la hauteur automatiquement */
+    position: relative;
+  }
+
+  /* Couleurs de fond pour chaque section */
+  .project-context {
+    background-color: #FFCB46; /* Jaune */
+    height: auto; /* Ajuste automatiquement la hauteur */
+  }
+
+  .project-tools {
+    
+    height: auto;
+  }
+
+  .project-responsive {
+    background-color: #57EF97; /* Vert clair */
+    height: auto;
+  }
+
+  .project-learnings {
+    display: flex;
+    flex-direction: column; /* Colonne pour les éléments */
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Ajuste automatiquement la hauteur */
+    text-align: center;
+    padding: 20px 5%;
+  }
+
+  .project-learnings .project-text-container {
+    max-width: 90%; /* Prend presque toute la largeur de l'écran */
+    text-align: left; /* Aligné à gauche */
+    gap: 1.5rem;
+  }
+
+  .project-learnings .project-title {
+  font-family: 'MonumentExtended', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0 auto; /* Centre le titre horizontalement */
+  text-align: center; /* Aligne le texte au centre */
+  margin-bottom: 20px; /* Ajoute un espace entre le titre et le contenu */
+  margin-top: 2rem;
+}
+
+  /* Titre */
+  .project-title {
+    font-family: 'MonumentExtended', sans-serif;
+    font-size: 1.5rem; /* Taille réduite pour mobile */
+    font-weight: bold;
+    color: #000;
+    margin: 0 0 20px 0; /* Ajoute de l'espace sous le titre */
+    text-align: center;
+  }
+
+  /* Conteneur du texte */
+  .project-text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le texte verticalement */
+    align-items: center;
+    gap: 1.5rem; /* Espacement entre les paragraphes */
+    max-width: 90%; /* Prend presque toute la largeur de l'écran */
+    text-align: center; /* Texte centré */
+  }
+
+  .project-text-container p {
+    font-family: 'TestSohne', sans-serif;
+    font-size: 16px; /* Taille ajustée pour mobile */
+    color: #000;
+    line-height: 1.4; /* Espacement réduit */
+    margin: 0;
+  }
+
+  /* Conteneur du contenu */
+  .project-content {
+    display: flex;
+    flex-direction: column; /* Les éléments sont empilés */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  /* Image */
+  .project-image {
+    flex: 1;
+    max-width: 90%; /* Réduit la taille de l'image */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Espace autour de l'image */
+  }
+}
+
+
+
+
+
+
