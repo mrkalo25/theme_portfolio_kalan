@@ -7,7 +7,7 @@ get_header();
     <div class="intro">
         <h1 class="title-outline">BONJOUR</h1>
         <h1 class="name-title">Je suis Kalan Yilmaz</h1>
-        <p class="specialty">Web design - Branding</p>
+        <h1 class="specialty">Web design - Branding</h1>
     </div>
     
     <div class="scroll-indicator">
@@ -61,20 +61,22 @@ get_header();
 
             <!-- Contenu de la bulle -->
             <div class="bubble-content">
-                <p>Je me spécialise dans le web design. J'ai acquis des compétences solides dans la conception numérique.</p>
-                <p>Je ne me limite pas à la création d'interfaces, j'ai aussi développé des compétences en développement et en communication.</p>
+                <p>Je me spécialise dans le web design. J'ai acquis des compétences solides dans la conception numérique. Notamment sur <strong> Figma, WordPress et en HTML/CSS</strong></p>
+                <p>Je ne me limite pas à la création d'interfaces, j'ai aussi développé des compétences en <strong>développement</strong> et en <strong>communication</strong>.</p>
                 <p>Je suis motivé par l'envie d'apprendre et d'évoluer dans ce domaine. J'apprécie également le travail collaboratif, et je suis convaincu que le partage des connaissances est essentiel pour stimuler l'excellence créative.</p>
             </div>
 
-            <!-- Bouton et icônes -->
+            <!-- Bouton et icônes --> 
             <div class="button-icons-container">
-                <a href="<?php echo get_template_directory_uri(); ?>/cv/Kalan_Yilmaz_CV.pdf" download class="cv-button">VOIR MON CV</a>
+                <a href="<?php echo get_template_directory_uri(); ?>/cv/Kalan_Yilmaz_CV_FR.pdf" download class="cv-button">FR CV</a>
+                <a href="<?php echo get_template_directory_uri(); ?>/cv/Kalan_Yilmaz_CV_EN.pdf" download class="cv-button">EN CV</a>
                 <div class="tools-icons">
                     <img src="<?php echo get_template_directory_uri(); ?>/icons/figma.svg" alt="Figma" class="tool-icon">
                     <img src="<?php echo get_template_directory_uri(); ?>/icons/wordpress.svg" alt="WordPress" class="tool-icon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/icons/html.svg" alt="Figma" class="tool-icon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/icons/css.svg" alt="WordPress" class="tool-icon">
                     <img src="<?php echo get_template_directory_uri(); ?>/icons/photoshop.svg" alt="Photoshop" class="tool-icon">
                     <img src="<?php echo get_template_directory_uri(); ?>/icons/illustrator.svg" alt="Illustrator" class="tool-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/icons/indesign.svg" alt="InDesign" class="tool-icon">
                 </div>
             </div>
         </div>
@@ -86,7 +88,7 @@ get_header();
 
 
 <section class="mes-projets-section" id="projet">
-    <h2 class="mes-projets-titre">MES PROJETS</h2>
+    <h1 class="mes-projets-titre">MES PROJETS</h1>
     <div class="mes-projets-container">
         <?php
         // La boucle WP Query pour récupérer les projets
@@ -116,7 +118,7 @@ get_header();
         ?>
     </div>
     <div class="autres-projets">
-        <a href="http://localhost:8888/portfolio/projets/" class="autres-projets-bouton">MES AUTRES PROJETS</a>
+        <a href="https://portfolio.kalan-yilmaz.fr/projets/" class="autres-projets-bouton">MES AUTRES PROJETS</a>
     </div>
 </section>
 
@@ -126,7 +128,7 @@ get_header();
 
 <section class="contact-section" id="contact">
     <div class="contact-container">
-        <h2 class="contact-title">CONTACTEZ MOI</h2>
+        <h1 class="contact-title">CONTACTEZ MOI</h1>
         <form class="contact-form" method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
             <div class="form-row">
                 <input type="text" name="nom" placeholder="Nom - Prénom" required>

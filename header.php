@@ -30,12 +30,5 @@
             </a>
         </div>
 
-
-        <!-- Lien vers la page "Menu" -->
-        <?php if (!is_page('menu-mobile')) : ?>
-    <a href="<?php echo site_url('/menu-mobile'); ?>" class="menu-toggle">
-        <img src="<?php echo get_template_directory_uri(); ?>/icons/menu.svg" alt="Menu Icon" class="icon-menu">
-    </a>
-<?php endif; ?>
     </div>
 </header>

@@ -11,19 +11,19 @@ get_header(); ?>
 
 <section class="project-header" id="home">
     <div class="project-intro">
-        <h1 class="project-title-outline">PROJETS</h1>
-        <h1 class="project-name-title">Découvrez mes projets</h1>
-        <p class="project-specialty">Web design - Projets</p>
+        <h1 class="title-outline">PROJETS</h1>
+        <h1 class="name-title">Découvrez mes projets</h1>
+        <h1 class="specialty">Web design - Projects</h1>
     </div>
     
-    <div class="project-scroll-indicator">
-        <div class="project-scroll-container">
+    <div class="scroll-indicator">
+        <div class="scroll-container">
             <!-- Texte qui tourne -->
-            <div class="project-scroll-circle">
+            <div class="scroll-circle">
                 <img src="<?php echo get_template_directory_uri(); ?>/icons/scroll.svg" alt="Scroll" class="project-scroll-text">
             </div>
             <!-- Flèche fixe -->
-            <img src="<?php echo get_template_directory_uri(); ?>/icons/fleche.svg" alt="Arrow" class="project-scroll-arrow">
+            <img src="<?php echo get_template_directory_uri(); ?>/icons/fleche.svg" alt="Arrow" class="scroll-arrow">
         </div>
     </div>
 </section>
@@ -52,7 +52,7 @@ get_header(); ?>
 
 
 <section class="mes-projets-section-2" id="projet">
-    <h2 class="mes-projets-titre">TOUS MES PROJETS</h2>
+    <h1 class="mes-projets-titre">TOUS MES PROJETS</h1>
     <div class="mes-projets-container">
         <?php
         // La boucle WP Query pour récupérer tous les projets
